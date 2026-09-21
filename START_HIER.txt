@@ -1,0 +1,84 @@
+MARCUS KNORR – WEBSITE-UPDATE FÜR ZETTAHOST
+Stand: 21.09.2026
+
+ENTHALTEN
+Die vollständige Website im bisherigen Design mit unverändertem animiertem Logo,
+Impressum, Datenschutzhinweisen und vorbereitetem Kontaktformular.
+Alle HTML-, CSS-, JavaScript- und PHP-Dateien sind bearbeitbar.
+
+WAS NOCH OFFEN IST
+1. ZETTAHOST veröffentlicht einen DPA als Bestandteil seiner Hostingbedingungen.
+   Die für Ihren Abschluss gültigen Bedingungen und den DPA bitte aufbewahren.
+   Die tatsächlichen Serverprotokolle und Löschfristen sind noch abzugleichen.
+2. Der Formularversand benötigt das Passwort des IONOS-E-Mail-Postfachs.
+   Kein Passwort ist in diesem Paket enthalten. Nicht im Chat mitteilen.
+3. Dieses Paket wurde nicht bei ZETTAHOST hochgeladen. Der echte Versand
+   und die Zustellung müssen nach Einrichtung auf dem Webspace geprüft werden.
+
+WEBSITE HOCHLADEN
+1. Die bestehenden Website-Dateien bei ZETTAHOST herunterladen und sichern.
+2. Den gesamten INHALT des Paketordners htdocs in das im ZETTAHOST-Panel
+   angegebene Stammverzeichnis der Domain knorr-substanz.de hochladen. Auch den Ordner private und dessen
+   .htaccess-Datei mit hochladen. START_HIER.txt und PRUEFNOTIZEN.md nicht hochladen.
+3. HTTPS muss für www.knorr-substanz.de und/oder knorr-substanz.de funktionieren.
+   HTTP im Hosting auf HTTPS umleiten. Das Formular verweigert unverschlüsselte
+   Anfragen absichtlich. Es folgt keinen ungeprüften Proxy-Headern.
+4. Website neu laden, bei Bedarf den Browsercache leeren.
+
+FORMULAR AKTIVIEREN
+Nach Klärung der Hosting-Voraussetzungen:
+1. private/config.php im geschützten Dateimanager oder lokal bearbeiten.
+2. Bei smtp_password das Passwort von contact@marcus-knorr-design.de eintragen.
+   Das ist das Postfach-Passwort, NICHT das IONOS-Kundenkonto-Passwort.
+   Bei PHP-Zeichenketten müssen ein Backslash und ein einfaches Anführungszeichen
+   im Passwort korrekt mit Backslash maskiert werden. Keine Kopien als .txt/.bak
+   im öffentlich erreichbaren Webspace belassen.
+3. enabled von false auf true ändern und speichern.
+4. Host smtp.ionos.de, Port 587 und STARTTLS sind vorbereitet.
+   Verwendet wird PHPMailer 7.1.1, PHP 8.2 oder neuer mit OpenSSL ist erforderlich.
+5. private muss für PHP schreibbar sein, damit die Versandbegrenzung funktioniert.
+   Keine pauschalen 777-Rechte vergeben. private/config.php muss beim direkten
+   Aufruf im Browser 403 oder 404 liefern und darf nie Quelltext anzeigen.
+6. Eine eigene Testanfrage senden und im IONOS-Postfach prüfen (auch Spamordner).
+   Die Antwortfunktion muss an die im Formular angegebene E-Mail-Adresse gehen.
+   Erst dann gilt der Versand als praktisch bestätigt.
+
+BIS ZUR AKTIVIERUNG
+Das Formular zeigt transparent an, dass der Direktversand nicht verfügbar ist.
+Telefon-, E-Mail- und WhatsApp-Kontakt bleiben nutzbar. Es wird keine erfolgreiche
+Zustellung vorgetäuscht und kein anderer Formulardienst zwischengeschaltet.
+Ohne JavaScript bleiben E-Mail und Telefon erreichbar.
+
+DATENSCHUTZ UND BETRIEB
+Name, E-Mail, Nachricht sind Pflicht; Telefon freiwillig.
+Keine Datei-Uploads, keine automatische Antwortmail, kein externes CAPTCHA.
+Nur die feste Firmenadresse erhält Nachrichten. Benutzerangaben werden nie
+als Absender oder zusätzliche Empfänger eingesetzt. Nachrichten sind Klartext.
+CSRF-Schutz, geschützte Sitzungscookies, serverseitige Prüfung und Versandlimits
+sind eingebaut: maximal 5 Versuche je abgeleiteter IP-Kennung pro 15 Minuten,
+maximal 30 Versuche insgesamt pro Stunde. Das verhindert nicht jeden Spam.
+Die Sicherheitsdatei private/rate.php enthält nur abgeleitete Kennungen und
+Zeitstempel, keine Nachrichten. Einträge verfallen nach einer Stunde und werden
+bei einer folgenden gültigen Formularverarbeitung entfernt. Ohne weitere
+Anfragen bleiben abgelaufene Einträge bis zur nächsten Bereinigung bestehen.
+Bei dauerhafter Abschaltung private/rate.php löschen.
+Formularinhalte werden ausschließlich per E-Mail übermittelt, nicht in einer
+Website-Datenbank gespeichert. Das IONOS-Postfach muss separat gepflegt werden.
+
+RECHTSTEXTE UND PRÜFSTAND
+Die Datenschutzhinweise wurden für ZETTAHOST überarbeitet. Die konkreten
+Protokollfristen sind sichtbar als offen gekennzeichnet. Der IONOS-AVV wurde
+vom Inhaber als abgeschlossen bestätigt. Eine vollständige rechtliche Freigabe
+oder Prüfung des persönlichen Hostingkontos ist damit nicht verbunden.
+Eigene AGB wurden nicht ergänzt: Die Website ermöglicht unverbindliche Anfragen,
+keine Online-Bestellungen. Hostingbedingungen sind keine Kunden-AGB Ihres Betriebs.
+Pauschale Tapezier-, Renovierungs- und Mauerwerkssanierungsangebote wurden aus
+Leistungstexten entfernt. Weitergehende Tätigkeiten erst nach Klärung des Umfangs
+mit der Handwerkskammer wieder konkret bewerben. Das vorhandene Logo bleibt erhalten.
+Die Nutzung von WhatsApp und Adressbuchzugriffe auf Ihren Geräten wurden nicht geprüft.
+
+Dieses Paket ist für Ihren ZETTAHOST-Webspace vorbereitet, dort aber noch nicht
+hochgeladen. Die separate ChatGPT-Sites-Vorschau zeigt dieselben Textänderungen,
+jedoch keinen aktiven PHP-Versand. PHP-Dateien nie auf rein statische Hosts laden.
+Ob Ihr ZETTAHOST-Tarif ausgehende SMTP-Verbindungen auf Port 587 zulässt, muss
+bei der Einrichtung geprüft werden. Es wurde keine Testmail versendet.
